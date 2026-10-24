@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>背面有座城 · 比赛独立篇</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="stage">
+
+    <!-- 开始页 -->
+    <section id="start" class="screen">
+      <div class="start-bg"></div>
+      <div class="start-shade"></div>
+      <div class="start-panel">
+        <p class="kicker">ABC STUDIO · 2026.10</p>
+        <h1>背面有座城</h1>
+        <p class="sub">卡片是世界，也是每次选择的依据</p>
+        <p class="blurb">一盒有正反两面的街区，一群有自己去向的人。<br>用有限的翻动与摆放，让城市运转。</p>
+        <div class="start-buttons">
+          <button id="btn-new" class="btn primary">开盒 · 新的一局</button>
+          <button id="btn-continue" class="btn">台灯 · 继续</button>
+          <button id="btn-archives" class="btn ghost">档案抽屉</button>
+        </div>
+        <p class="start-foot">横屏体验 · 键盘 ← ↑ → ↓ / Enter / R / F / Ctrl+Z</p>
+      </div>
+    </section>
+
+    <!-- 主桌面 -->
+    <section id="game" class="screen hidden">
+      <header id="topbar">
+        <div class="tb-left">
+          <span id="chapter-badge" class="chapter-badge">第一章</span>
+          <span class="day">第 <b id="day-num">1</b> / <span id="day-total">4</span> 天</span>
+        </div>
+        <div class="tb-stats">
+          <span class="stat" id="stat-hands">手 0 / 4</span>
+          <span class="stat" id="stat-material">物资 4</span>
+          <span class="stat" id="stat-power">电力 0 / 0</span>
+        </div>
+        <div class="tb-actions">
+          <button class="mini" data-act="undo" title="撤销 (Ctrl+Z)">撤销</button>
+          <button class="mini" data-act="redo" title="重做 (Ctrl+Y)">重做</button>
+          <button class="mini" data-act="agreements" title="约定">约定</button>
+          <button class="mini" data-act="archives" title="档案">档案</button>
+          <button class="mini" data-act="help" title="操作说明">说明</button>
+        </div>
+      </header>
+
+      <main id="table">
+        <div id="left">
+          <div id="board-wrap">
+            <div id="board"></div>
+          </div>
+          <div id="tray-wrap">
+            <div class="tray-head"><span>托盘</span><span id="tray-tip" class="tray-tip">选中卡后再点目标格，可以放置或换位</span></div>
+            <div id="tray"></div>
+          </div>
+        </div>
+        <aside id="right">
+          <div class="tabs" id="tabs">
+            <button data-tab="card" class="active">卡片</button>
+            <button data-tab="people">名册</button>
+            <button data-tab="today">今日</button>
+          </div>
+          <div id="panel"></div>
+        </aside>
+      </main>
+
+      <div id="confirm-bar">
+        <div id="confirm-hint"></div>
+        <button id="btn-confirm" class="btn primary">开始这一天</button>
+      </div>
+    </section>
+
+    <div id="overlay" class="hidden">
+      <div id="overlay-card"></div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
